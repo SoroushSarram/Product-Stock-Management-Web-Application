@@ -1,0 +1,35 @@
+﻿@page
+@model Soroush_Sarram_WebServer2_Midtrem.Pages.MyStackInfoModel
+@{
+}
+
+<table class="table">
+
+    <thead>
+        <tr>
+            <th>ProductId</th>
+            <th>ProductDescription</th>
+            <th>Quantity</th>
+            <th>BuyPrice</th>
+            <th>SellPrice</th>
+        </tr>
+    </thead>
+
+    <body>
+        @foreach (var item in Model.Products)
+        {
+        <tr>
+            <td>@item.ProductId</td>
+            <td>@item.ProductDescription</td>
+            <td>@item.Quantity</td>
+            <td>@item.BuyPrice</td>
+            <td>@item.SellPrice</td>
+        </tr>
+        }
+
+    </body>
+</table>
+
+<h2>Total amount: @Model.GetTotalAmount()</h2> 
+<h2>Total profit: @Model.GetTotalProfit()</h2> 
+<h2>Price average: @Model.GetPriceAverage()</h2> 

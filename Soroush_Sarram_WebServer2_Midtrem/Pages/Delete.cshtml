@@ -1,0 +1,19 @@
+﻿@page
+@model Soroush_Sarram_WebServer2_Midtrem.Pages.DeleteModel
+@{
+}
+
+<form method="post">
+
+    <h1>Do you want to delete?</h1>
+    <h2>@Model.Product.ProductId</h2>
+    <h2>@Model.Product.ProductDescription</h2>
+    <h2>@Model.Product.Quantity</h2>
+    <h2>@Model.Product.BuyPrice</h2>
+    <h2>@Model.Product.SellPrice</h2>
+    <button type="submit" class="btn btn-danger w-50 mt-4">Yes</button>
+    <a asp-page="/Index" class="btn btn-success w-50 mt-4">No</a>
+
+    <input type="hidden" value="@Model.Product.ProductId" />
+
+</form>
